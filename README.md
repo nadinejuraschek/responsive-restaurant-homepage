@@ -1,1 +1,6 @@
-# responsive-restaurant-homepage
+# Responsive Restaurant App
+
+## Technologies
+- TypeScript
+- React
+- styled-components
