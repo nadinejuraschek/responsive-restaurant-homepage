@@ -1,9 +1,9 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: "Kanit", sans-serif;
+    font-family: "Helvetica", sans-serif;
     margin: 0;
     padding: 0;
   }

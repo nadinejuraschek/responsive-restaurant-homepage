@@ -1,15 +1,23 @@
-import { HeroContainer } from "./styles";
+import { ButtonWrapper, Content, Items } from './styles';
 
-import { HeroProps } from "./types";
+import { Button } from '../Button';
+import { Title } from '../Title';
 
-import Navbar from "../Navbar";
-
-const Hero = (props: HeroProps) : JSX.Element => {
+export const Hero = (): JSX.Element => {
   return (
-    <HeroContainer>
-      <Navbar />
-    </HeroContainer>
+    <Content>
+      <Items>
+        <Title as='h1' size='large' uppercase>
+          This is a Title
+        </Title>
+        <Title as='h2' size='small'>
+          Lorem ipsum text goes here
+        </Title>
+        <ButtonWrapper>
+          <Button>View Menu</Button>
+          <Button outlined>Book a Table</Button>
+        </ButtonWrapper>
+      </Items>
+    </Content>
   );
 };
-
-export default Hero;

@@ -1,3 +1,3 @@
-export interface NavbarProps {}
-
-export interface NavbarElementsProps {}
+export interface NavbarProps {
+  changeThemeHandler: () => void;
+}

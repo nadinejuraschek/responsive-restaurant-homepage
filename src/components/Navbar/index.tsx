@@ -1,16 +1,17 @@
-import { MenuBars, Nav, NavLink, NavIcon, NavText } from "./styled";
-import { NavbarProps } from "./types";
+import { useContext } from 'react';
+import { Logo, Nav, NavLink } from './styled';
+import { NavbarProps } from './types';
+import { ThemeContext } from 'styled-components';
 
-const Navbar = (props: NavbarProps): JSX.Element => {
+export const Navbar = (props: NavbarProps): JSX.Element => {
+  const { changeThemeHandler } = props;
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Nav>
-      <NavLink to="/">Pizza</NavLink>
-      <NavIcon>
-        <NavText>Menu</NavText>
-        <MenuBars />
-      </NavIcon>
+      <NavLink onClick={changeThemeHandler}>
+        <Logo alt='Bakery Logo' src={themeContext.images.logo} />
+      </NavLink>
     </Nav>
   );
 };
-
-export default Navbar;
